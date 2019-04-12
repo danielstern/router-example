@@ -77,14 +77,14 @@ switch (route) {
                     <div>No such article was found</div>
                 `}
             `
-        )
+        );
         break;
     default:
         render(
             database.users.map(user=>(
                 `<h3><a href="/user/${user.id}">${user.name}</a></h3>`
             )).join('')
-        )
+        );
 }
 
 function render(html) {
