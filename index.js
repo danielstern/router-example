@@ -81,12 +81,13 @@ switch (route) {
         break;
     default:
         render(
+            `<h3>All Authors</h3>`,
             database.users.map(user=>(
                 `<h3><a href="/user/${user.id}">${user.name}</a></h3>`
             )).join('')
         );
 }
 
-function render(html) {
-    document.getElementById("Container").innerHTML = html;
+function render(...html) {
+    document.getElementById("Container").innerHTML = html.join('');
 }
